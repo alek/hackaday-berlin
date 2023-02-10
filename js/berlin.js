@@ -74,44 +74,50 @@ drawRectangle = function(coord, width, height, fill, stroke, domID, id) {
 
 $( document ).ready(function() {
 
-	
-	let drawBorder = false
+	render = function() {
+		let drawBorder = false
+		let zoom = 4+Math.ceil(24*Math.random())
+		$("#logo-gen-main").empty()
 
-	let width = $("#logo-gen-main").width()
-	let numSquares = Math.min(Math.sqrt(width),32)
-	let dim = width/numSquares
-	
-	let height = $("#logo-gen-main").height()
-	height = height - height%dim
+		let width = $("#logo-gen-main").width()
+		let numSquares = Math.min(Math.sqrt(width),zoom)
+		let dim = width/numSquares
+		
+		let height = $("#logo-gen-main").height()
+		height = height - height%dim
 
-	if (drawBorder) {
+		if (drawBorder) {
 
-		drawLine([0,0], [width,0], "rgba(0,0,0,0.2)", 1, "logo-gen-main")
-		drawLine([0,0], [0,height], "rgba(0,0,0,0.2)", 1, "logo-gen-main")
-		drawLine([width,0], [width,height], "rgba(0,0,0,0.2)", 1, "logo-gen-main")
-		drawLine([0,height], [width,height], "rgba(0,0,0,0)", 1, "logo-gen-main")
+			drawLine([0,0], [width,0], "rgba(0,0,0,0.2)", 1, "logo-gen-main")
+			drawLine([0,0], [0,height], "rgba(0,0,0,0.2)", 1, "logo-gen-main")
+			drawLine([width,0], [width,height], "rgba(0,0,0,0.2)", 1, "logo-gen-main")
+			drawLine([0,height], [width,height], "rgba(0,0,0,0)", 1, "logo-gen-main")
+
+			for (let i=0; i<numSquares; i++) {
+				drawLine([i*dim,0], [i*dim,height], "rgba(0,0,0,0.05)", 1, "logo-gen-main")
+				drawLine([0,i*dim], [width,i*dim], "rgba(0,0,0,0.05)", 1, "logo-gen-main")
+			}
+
+		}
 
 		for (let i=0; i<numSquares; i++) {
-			drawLine([i*dim,0], [i*dim,height], "rgba(0,0,0,0.05)", 1, "logo-gen-main")
-			drawLine([0,i*dim], [width,i*dim], "rgba(0,0,0,0.05)", 1, "logo-gen-main")
-		}
-
-	}
-
-	for (let i=0; i<numSquares; i++) {
-		for (let j=0; j<Math.min(numSquares, height/dim); j++) {
-			let dice = Math.random()
-			if (dice < 0.2) {
-				drawPolygon([[i*dim,j*dim],[(i+1)*dim,j*dim],[(i+1)*dim,(j+1)*dim]], "#000",  "logo-gen-main",1)
-			} else if (dice < 0.4) {
-				drawPolygon([[i*dim,j*dim],[i*dim,(j+1)*dim],[(i+1)*dim,j*dim]], "#000",  "logo-gen-main",1)
-			} else if (dice < 0.6) {
-				drawPolygon([[i*dim,j*dim],[i*dim,(j+1)*dim],[(i+1)*dim,(j+1)*dim], [(i+1)*dim, j*dim]], "#000",  "logo-gen-main",1)
-			} else if (dice < 0.8) {
-				drawPolygon([[i*dim,j*dim],[i*dim,(j+1)*dim],[(i+1)*dim,(j+1)*dim], [(i+1)*dim, j*dim]], "#1E72D0",  "logo-gen-main",1)
+			for (let j=0; j<Math.min(numSquares, height/dim); j++) {
+				let dice = Math.random()
+				if (dice < 0.2) {
+					drawPolygon([[i*dim,j*dim],[(i+1)*dim,j*dim],[(i+1)*dim,(j+1)*dim]], "#000",  "logo-gen-main",1)
+				} else if (dice < 0.4) {
+					drawPolygon([[i*dim,j*dim],[i*dim,(j+1)*dim],[(i+1)*dim,j*dim]], "#000",  "logo-gen-main",1)
+				} else if (dice < 0.6) {
+					drawPolygon([[i*dim,j*dim],[i*dim,(j+1)*dim],[(i+1)*dim,(j+1)*dim], [(i+1)*dim, j*dim]], "#000",  "logo-gen-main",1)
+				} else if (dice < 0.8) {
+					drawPolygon([[i*dim,j*dim],[i*dim,(j+1)*dim],[(i+1)*dim,(j+1)*dim], [(i+1)*dim, j*dim]], "#1E72D0",  "logo-gen-main",1)
+				}
 			}
-		}
+		}	
 	}
+	
+	render()
+	setInterval(render,1000)
 
 
 });
