@@ -76,7 +76,7 @@ $( document ).ready(function() {
 
 	render = function() {
 		let drawBorder = false
-		let zoom = 4+Math.ceil(24*Math.random())
+		let zoom = 2+Math.ceil(24*Math.random())
 		$("#logo-gen-main").empty()
 
 		let width = $("#logo-gen-main").width()
