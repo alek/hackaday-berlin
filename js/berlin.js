@@ -1,3 +1,5 @@
+let iteration = 0
+
 var addSVG = function(tag, attrs) {
     var el= document.createElementNS('http://www.w3.org/2000/svg', tag);
     for (var k in attrs) {
@@ -75,8 +77,11 @@ drawRectangle = function(coord, width, height, fill, stroke, domID, id) {
 $( document ).ready(function() {
 
 	render = function() {
+		iteration++
 		let drawBorder = false
-		let zoom = 2+Math.ceil(24*Math.random())
+		// let zoom = 2+Math.ceil(24*Math.random())
+		// let zoom = 5 + (24-(iteration*7)%24)
+		let zoom = 24
 		$("#logo-gen-main").empty()
 
 		let width = $("#logo-gen-main").width()
