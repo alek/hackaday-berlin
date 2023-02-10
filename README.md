@@ -1,7 +1,5 @@
-# 2022 Hackaday Superconference 
-# Pasadena, CA
-# Nov 4-6 2022
+# Hackaday Berlin 2023
+# Berlin, Germany
+# March 25-26 2023
 
-# Public Website + Official Icons
-
-# Coming soon: Talk Schedule / json
+# Public Website / Schedule
