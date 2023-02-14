@@ -122,7 +122,7 @@ $( document ).ready(function() {
 	}
 	
 	render()
-	setInterval(render,1500)
+	setInterval(render,5000)
 
 
 });
