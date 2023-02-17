@@ -537,6 +537,9 @@ footer p {
   body {
     padding: 3em;
   }
+  header {
+   margin-bottom: 2em;
+  }
   .talk {
     max-width: 45%;
     margin-right: 5%;
@@ -551,7 +554,7 @@ footer p {
     display: none;
   }
   header img {
-    width: 12em;
+    width: 15em;
   }
   .talk {
     max-width: 100%;
