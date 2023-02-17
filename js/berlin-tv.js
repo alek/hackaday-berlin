@@ -39,7 +39,7 @@ $( document ).ready(function() {
 		let offset = 0;
 		if (canvas.width < 1259) {
 			offset = canvas.width - 1259
-		} else if (canvas.width > 1600) {
+		} else if (canvas.width > 1800) {
 			offset = Math.min(300, canvas.width - 1600)
 		}
 		const ctx = canvas.getContext("2d");
