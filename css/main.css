@@ -462,6 +462,16 @@ p {
 }
 */
 
+#knob-control {
+  padding: 1em 0em 1em 1em;
+  display: flex;
+  justify-content: right;
+}
+
+#knob-control input {
+  margin-left: 0.5em;
+}
+
 canvas {
 /*  width: 1000px;
   height: 1000px;*/

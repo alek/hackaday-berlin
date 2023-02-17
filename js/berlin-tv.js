@@ -1,3 +1,7 @@
+let thresholdA = 100
+let thresholdB = 100
+let maxDice = 76
+
 function setPixel(imageData, x, y, r, g, b, a) {
     var index = 4 * (x + y * imageData.width);
     imageData.data[index+0] = r;
@@ -13,11 +17,11 @@ function render(img, canvas, ctx, offset) {
 		let pixels = id.data
 		ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-		let dice = Math.floor(Math.random()*76)
+		let dice = Math.floor(Math.random()*maxDice)
 		for (let i=0; i<canvas.height; i++) {
 			for (let j=0; j<canvas.width; j++) {
 				let off = (i * id.width + j) * 4;
-				if (pixels[off] > dice && pixels[off+2] > 100 + 100*Math.random()) {									
+				if (pixels[off] > dice && pixels[off+2] > thresholdA + thresholdB*Math.random()) {									
 					setPixel(id,j, i, pixels[off], pixels[off+1],pixels[off+2],pixels[off+3])
 				} else {
 					setPixel(id,j, i, 0, 0, 0, 0)
@@ -25,6 +29,25 @@ function render(img, canvas, ctx, offset) {
 			}
 		}
 		ctx.putImageData(id, 0, 0);		
+}
+
+function inputEventHandler(el) {
+	let val = parseInt(el.value)
+	switch(el.id) {
+		case "knob-1":
+			thresholdA = val
+			break
+		case "knob-2":
+			thresholdB = val
+			break
+		case "knob-3":
+			maxDice = val
+			break
+	}
+}
+
+function changeEventHandler(el) {
+	console.log(el.value)	
 }
 
 $( document ).ready(function() {
