@@ -412,6 +412,13 @@ p {
   min-height: 120px;
 }
 
+#source {
+  display: none;
+}
+
+canvas {
+  background-color: #000;
+}
 
 footer {
   /*margin-top: 2em;*/
