@@ -1,4 +1,9 @@
 let iteration = 0
+let colors = ["#0061D6", "#262626", "#313131", "#000"]
+
+function randomColor() {
+	return colors[Math.floor(Math.random()*colors.length)]
+}
 
 function setPixel(imageData, x, y, r, g, b, a) {
     var index = 4 * (x + y * imageData.width);
@@ -30,6 +35,9 @@ function render(img, canvas, ctx) {
 		}
 		ctx.putImageData(id, 0, 0);		
 		iteration++
+		// if (iteration%2 == 0) {
+		// 	$("#container").css("background-color", randomColor());
+		// }
 }
 
 

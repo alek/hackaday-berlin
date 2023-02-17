@@ -419,12 +419,33 @@ p {
 #container {
   width: 100%;
   height: 100%;
+  background: linear-gradient(0deg, #313131, #000, #313131, #0061D6);
+  background-size: 400% 400%;
+  background-blend-mode: difference;
+  animation: gradient 10s ease infinite;  
 }
 
+
+@keyframes gradient {
+  0% {
+    background-position: 0% -50%;
+  }
+  80% {
+    background-position: 0% -50%;
+  }
+  90% {
+    background-position: 0% 150%;
+  }
+  100% {
+    background-position: 0% -50%;
+  }
+}
+
+
 canvas {
-  background-color: #000;
 /*  width: 1000px;
   height: 1000px;*/
+  background-blend-mode: difference;
 }
 
 footer {
