@@ -38,7 +38,12 @@ $( document ).ready(function() {
 		const container = document.getElementById('container');
 		canvas.width = container.clientWidth;
 		canvas.height = 800;
-		let offset = canvas.width < 1259 ? -(1259-canvas.width) : 0
+		let offset = 0;
+		if (canvas.width < 1259) {
+			offset = canvas.width - 1259
+		} else if (canvas.width > 1600) {
+			offset = Math.min(300, canvas.width - 1600)
+		}
 		const ctx = canvas.getContext("2d");
 		render(img,canvas, ctx, offset)
 		setInterval(function() { render(img, canvas, ctx, offset) }, 75)
