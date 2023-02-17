@@ -1,6 +1,9 @@
 let thresholdA = 100
 let thresholdB = 100
 let maxDice = 76
+let vScroll = 0
+
+let iteration = 0
 
 function setPixel(imageData, x, y, r, g, b, a) {
     var index = 4 * (x + y * imageData.width);
@@ -28,12 +31,16 @@ function render(img, canvas, ctx, offset) {
 				}
 			}
 		}
-		ctx.putImageData(id, 0, 0);		
+		ctx.putImageData(id, 0, (iteration*vScroll)%800);		
+		iteration++
 }
 
 function inputEventHandler(el) {
 	let val = parseInt(el.value)
 	switch(el.id) {
+		case "knob-0":
+			vScroll = val
+			break
 		case "knob-1":
 			thresholdA = val
 			break
