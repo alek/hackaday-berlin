@@ -2,6 +2,7 @@ let thresholdA = 100
 let thresholdB = 100
 let maxDice = 76
 let vScroll = 0
+let hScroll = 0
 
 let iteration = 0
 
@@ -31,7 +32,7 @@ function render(img, canvas, ctx, offset) {
 				}
 			}
 		}
-		ctx.putImageData(id, 0, (iteration*vScroll)%800);		
+		ctx.putImageData(id, (iteration*hScroll)%1200, (iteration*vScroll)%800);		
 		iteration++
 }
 
@@ -42,12 +43,15 @@ function inputEventHandler(el) {
 			vScroll = val
 			break
 		case "knob-1":
-			thresholdA = val
+			hScroll = val
 			break
 		case "knob-2":
-			thresholdB = val
+			thresholdA = val
 			break
 		case "knob-3":
+			thresholdB = val
+			break
+		case "knob-4":
 			maxDice = val
 			break
 	}
