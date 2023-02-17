@@ -41,6 +41,9 @@ $( document ).ready(function() {
 	// img.setAttribute('crossOrigin', '');
 	img.onload = function() {
 		const canvas = document.getElementById("canvas");		
+		const container = document.getElementById('container');
+		canvas.width = container.clientWidth;
+		canvas.height = 800;
 		const ctx = canvas.getContext("2d");
 		render(img,canvas, ctx)
 		setInterval(function() { render(img, canvas, ctx) }, 75)
