@@ -1,10 +1,3 @@
-let iteration = 0
-let colors = ["#0061D6", "#262626", "#313131", "#000"]
-
-function randomColor() {
-	return colors[Math.floor(Math.random()*colors.length)]
-}
-
 function setPixel(imageData, x, y, r, g, b, a) {
     var index = 4 * (x + y * imageData.width);
     imageData.data[index+0] = r;
@@ -13,16 +6,15 @@ function setPixel(imageData, x, y, r, g, b, a) {
     imageData.data[index+3] = a;
 }
 
-function render(img, canvas, ctx) {
+function render(img, canvas, ctx, offset) {
 
-		ctx.drawImage(img, 0, 0);
+		ctx.drawImage(img, offset, 0);
 		let id = ctx.getImageData(0, 0, canvas.width, canvas.height);	
 		let pixels = id.data
 		ctx.clearRect(0, 0, canvas.width, canvas.height);
 		ctx.fillStyle = 'red';
 		ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-		// let dice = 2 + iteration%3
 		let dice = Math.floor(Math.random()*255)*0.3
 		for (let i=0; i<canvas.height; i++) {
 			for (let j=0; j<canvas.width; j++) {
@@ -35,27 +27,21 @@ function render(img, canvas, ctx) {
 			}
 		}
 		ctx.putImageData(id, 0, 0);		
-		iteration++
-		// if (iteration%2 == 0) {
-		// 	$("#container").css("background-color", randomColor());
-		// }
 }
-
 
 $( document ).ready(function() {
 
 	var img = new Image();	
 	img.src = "img/mess.png";
-	// img.crossOrigin = "Anonymous";
-	// img.setAttribute('crossOrigin', '');
 	img.onload = function() {
 		const canvas = document.getElementById("canvas");		
 		const container = document.getElementById('container');
 		canvas.width = container.clientWidth;
 		canvas.height = 800;
+		let offset = canvas.width < 1259 ? -(1259-canvas.width) : 0
 		const ctx = canvas.getContext("2d");
-		render(img,canvas, ctx)
-		setInterval(function() { render(img, canvas, ctx) }, 75)
+		render(img,canvas, ctx, offset)
+		setInterval(function() { render(img, canvas, ctx, offset) }, 75)
 	}
 
 });
