@@ -12,10 +12,8 @@ function render(img, canvas, ctx, offset) {
 		let id = ctx.getImageData(0, 0, canvas.width, canvas.height);	
 		let pixels = id.data
 		ctx.clearRect(0, 0, canvas.width, canvas.height);
-		ctx.fillStyle = 'red';
-		ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-		let dice = Math.floor(Math.random()*255)*0.3
+		let dice = Math.floor(Math.random()*76)
 		for (let i=0; i<canvas.height; i++) {
 			for (let j=0; j<canvas.width; j++) {
 				let off = (i * id.width + j) * 4;
