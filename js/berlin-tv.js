@@ -22,11 +22,12 @@ function render(img, canvas, ctx) {
 		ctx.fillStyle = 'red';
 		ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-		let dice = 2 + iteration%3
+		// let dice = 2 + iteration%3
+		let dice = Math.floor(Math.random()*255)
 		for (let i=0; i<canvas.height; i++) {
 			for (let j=0; j<canvas.width; j++) {
 				let off = (i * id.width + j) * 4;
-				if (pixels[off+2] > 75 + 180*Math.random()) {
+				if (pixels[off+1] > dice && pixels[off+2] > 75 + 180*Math.random()) {
 					setPixel(id,j, i, pixels[off], pixels[off+1],pixels[off+2],pixels[off+3])
 				} else {
 					setPixel(id,j, i, 0, 0, 0, 0)
