@@ -47,7 +47,6 @@ function inputEventHandler(el) {
 }
 
 function changeEventHandler(el) {
-	console.log(el.value)	
 }
 
 $( document ).ready(function() {
@@ -60,7 +59,6 @@ $( document ).ready(function() {
 		canvas.width = container.clientWidth;
 		canvas.height = 800;
 		let offset = 0;
-		console.log(canvas.width)
 		if (canvas.width < 1259) {
 			offset = canvas.width - 1259
 		} else if (canvas.width > 1400 && canvas.width < 1800) {
@@ -72,6 +70,7 @@ $( document ).ready(function() {
 		const ctx = canvas.getContext("2d");
 		render(img,canvas, ctx, offset)
 		setInterval(function() { render(img, canvas, ctx, offset) }, 75)
+		$("#knob-control").css("display", "flex")
 	}
 
 });
