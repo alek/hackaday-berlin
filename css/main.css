@@ -21,7 +21,7 @@ html {
 
 body {
 /*  padding: 5em;*/
-  padding-top: 5em;
+  padding-top: 3em;
   width:  90vw;
   margin: auto;
 }
@@ -370,7 +370,7 @@ a {
   text-transform: uppercase;
   padding: 1em;
   font-size: 0.75em;
-  margin-right: 3em;
+  /*margin-right: 3em;*/
 }
 
 .BuyTickets:hover {
