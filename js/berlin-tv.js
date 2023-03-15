@@ -102,6 +102,7 @@ $( document ).ready(function() {
 
 	var img = new Image();	
 	img.src = "img/mess.png";
+	// img.src = "img/mj-4.png";
 	img.onload = function() {
 		const canvas = document.getElementById("canvas");		
 		const container = document.getElementById('container');
