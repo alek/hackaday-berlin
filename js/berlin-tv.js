@@ -5,8 +5,7 @@ let vScroll = 0
 let hScroll = 0
 
 let iteration = 0
-// var imageSource = "img/mess.png"
-var imageSource = "img/mj-1.png"
+var imageSource = "img/mess.png"
 
 const images = {}
 
