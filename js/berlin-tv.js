@@ -6,6 +6,7 @@ let hScroll = 0
 
 let iteration = 0
 var imageSource = "img/mess.png"
+let increment = 1
 
 const images = {}
 
@@ -52,7 +53,7 @@ function render(canvas, ctx, offset) {
 			ctx.putImageData(id, images[imageSource].width + (iteration*hScroll)%1200, (iteration*vScroll)%800);	
 		}	
 	}
-	iteration++
+	iteration+=increment
 }
 
 function inputEventHandler(el) {
@@ -147,7 +148,7 @@ $( document ).ready(function() {
 	renderSchedule()
 
 	$("#channel-button").click(function(){
-		let nextSource = "img/mj-" + Math.ceil(Math.random()*4) + ".png"
+		let nextSource = "img/mj-" + Math.floor(Math.random()*5) + ".png"
 		let img = new Image();	
 		img.src = nextSource;
 		img.onload = function() {

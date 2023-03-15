@@ -22,6 +22,8 @@
 
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&family=IBM+Plex+Sans:wght@100;300;400;500;600;700&family=IBM+Plex+Serif:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 
   <meta name="theme-color" content="#fafafa">
   <script src="js/schedule.js"></script>
@@ -55,7 +57,15 @@
     <input type="range" class="input-knob" data-diameter="20" data-bgcolor="#262626" data-fgcolor="#F2F1E4" min="0" max="255" step="1" id="knob-2" oninput="inputEventHandler(this)" onchange="changeEventHandler(this)"/>
     <input type="range" class="input-knob" data-diameter="20" data-bgcolor="#262626" data-fgcolor="#F2F1E4" min="0" max="255" step="1" id="knob-3" oninput="inputEventHandler(this)" onchange="changeEventHandler(this)"/>
     <input type="range" class="input-knob" data-diameter="20" data-bgcolor="#262626" data-fgcolor="#F2F1E4" min="0" max="255" step="1" id="knob-4" oninput="inputEventHandler(this)" onchange="changeEventHandler(this)"/>
+  
+     <audio id="player" loop>
+          <source src="./img/Berlin2023.mp3" type="audio/mp3">
+      </audio>
+      <button id="play-control" class="material-icons" onclick="document.getElementById('player').play()">play_circle_filled</button> 
+      <button class="material-icons" onclick="document.getElementById('player').pause()">pause_circle_filled</button> 
+
   </div>
+
 
 
   <div id="talks-container">
