@@ -5,8 +5,7 @@ let vScroll = 0
 let hScroll = 0
 
 let iteration = 0
-// var imageSource = "img/mess.png"
-var imageSource = "img/mj-1.png"
+var imageSource = "img/mess.png"
 
 const images = {}
 
@@ -43,9 +42,6 @@ function render(canvas, ctx, offset) {
 			ctx.putImageData(id, -Math.sign(hScroll)*1200+(iteration*hScroll)%1200, (iteration*vScroll)%800);			
 		}
 		ctx.putImageData(id, (iteration*hScroll)%1200, (iteration*vScroll)%800);		
-		if (images[imageSource].width < canvas.width) {
-			ctx.putImageData(id, images[imageSource].width + (iteration*hScroll)%1200, (iteration*vScroll)%800);		
-		}
 	}
 	iteration++
 }
