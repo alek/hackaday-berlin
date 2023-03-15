@@ -84,4 +84,33 @@ $( document ).ready(function() {
 		$("#knob-control").css("display", "flex")
 	}
 
+	for (let i=0; i<schedule.length; i++) {
+		let entry = $('<div></div>').addClass("talk-entry");
+
+		let head = $('<div></div>').addClass("talk-head");
+		head.append($('<h5>' + schedule[i]["time"] + '</h5>'))
+		head.append($('<h2>' + schedule[i]["title"] + '</h2>'))
+		head.append($('<h3>' + schedule[i]["speaker"] + '</h3>'))
+		
+		let parallel = $('<div></div>').addClass("parallel");
+		let who = $('<div></div>').addClass("bio");
+		who.append($('<img></img>').attr({ 'src':  schedule[i]["headshot"], 'height': '200px' } ))
+		who.append($('<div class="speaker">' + schedule[i]["about"] + '</div>'))	
+
+		let desc = $('<div></div>').addClass("description");
+		desc.append('<p>' + schedule[i]["description"]  + "</p>")
+
+		if (i%2 == 0) {
+			parallel.append(desc)
+			parallel.append(who)
+		} else {
+			head.addClass("right")
+			parallel.append(who)
+			desc.addClass("right-desc")
+			parallel.append(desc)
+		}
+		entry.append(head)
+		entry.append(parallel)
+		$("#talks-container").append(entry)
+	}
 });

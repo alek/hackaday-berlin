@@ -16,6 +16,7 @@ html {
   font-size: 1em;
   /*background-color: #272C33;*/
   background-color: #F2F1E4;
+  
   font-family: Helvetica, sans-serif;
 }
 
@@ -408,6 +409,12 @@ p {
   letter-spacing: 0.1em;
 }
 
+.parallel {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2em;
+}
+
 .hash {
   min-height: 120px;
 }
@@ -479,6 +486,67 @@ canvas {
   background-blend-mode: difference;
 }
 
+#talks-container {
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
+.talk-entry {
+  margin-bottom: 3em;
+  padding-bottom: 3em;
+  padding-top: 3em;
+  /*border-bottom: 1px solid rgba(0,0,0,0.5);*/
+}
+
+.talk-entry .bio {
+}
+
+.talk-entry h2 {
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 2em;
+    /*line-height: 2em;*/
+    margin-bottom: 0.5em;
+}
+
+.talk-entry h3 {
+    font-family: 'IBM Plex Sans', serif;
+    text-transform: none;
+    font-weight: 300;
+    font-size: 1.5em;
+    color:  #0061D5;
+
+}
+
+.talk-entry p {
+  font-size: 1em;
+  line-height: 1.25em;
+  max-width: 65%;
+}
+
+.right {
+  text-align: right;
+}
+
+.right-desc {
+  display: flex;
+  justify-content: right;  
+}
+
+.talk-entry h5 {
+  font-size: 1em;
+  color:  rgba(0,0,0,0.5);
+  margin-bottom: 0em;
+  text-transform: uppercase;
+}
+
+.talk-entry img {
+  border-radius: 5%;
+  width: 10em;
+  height: 10em;
+  margin-bottom: 2em;
+  filter:  grayscale(100%) sepia(15%)
+}
+
 footer {
   margin-top: 2em;
   border-top:  1px solid rgba(0,0,0,0.5);
@@ -526,7 +594,6 @@ footer p {
 
 .footer .locations h5 {
   font-size: 0.5em;
-  color:  red;
 }
 
 @media only screen and (max-width: 1600px) {
