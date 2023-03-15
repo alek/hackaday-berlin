@@ -17,34 +17,33 @@ function setPixel(imageData, x, y, r, g, b, a) {
     imageData.data[index+3] = a;
 }
 
-function render(imageSource, canvas, ctx, offset) {
+function render(canvas, ctx, offset) {
+	if (images[imageSource]) {
+		ctx.drawImage(images[imageSource], offset, 0);
+		let id = ctx.getImageData(0, 0, canvas.width, canvas.height);	
+		let pixels = id.data
+		ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-		if (images[imageSource]) {
-			ctx.drawImage(images[imageSource], offset, 0);
-			let id = ctx.getImageData(0, 0, canvas.width, canvas.height);	
-			let pixels = id.data
-			ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-			let dice = Math.floor(Math.random()*maxDice)
-			for (let i=0; i<canvas.height; i++) {
-				for (let j=0; j<canvas.width; j++) {
-					let off = (i * id.width + j) * 4;
-					if (pixels[off] > dice && pixels[off+2] > thresholdA + thresholdB*Math.random()) {									
-						setPixel(id,j, i, pixels[off], pixels[off+1],pixels[off+2],pixels[off+3])
-					} else {
-						setPixel(id,j, i, 0, 0, 0, 0)
-					}
+		let dice = Math.floor(Math.random()*maxDice)
+		for (let i=0; i<canvas.height; i++) {
+			for (let j=0; j<canvas.width; j++) {
+				let off = (i * id.width + j) * 4;
+				if (pixels[off] > dice && pixels[off+2] > thresholdA + thresholdB*Math.random()) {									
+					setPixel(id,j, i, pixels[off], pixels[off+1],pixels[off+2],pixels[off+3])
+				} else {
+					setPixel(id,j, i, 0, 0, 0, 0)
 				}
 			}
-			if (vScroll != 0) {
-				ctx.putImageData(id, (iteration*hScroll)%1200, -Math.sign(vScroll)*800+(iteration*vScroll)%800);		
-			}		
-			if (hScroll != 0) {
-				ctx.putImageData(id, -Math.sign(hScroll)*1200+(iteration*hScroll)%1200, (iteration*vScroll)%800);			
-			}
-			ctx.putImageData(id, (iteration*hScroll)%1200, (iteration*vScroll)%800);		
 		}
-		iteration++
+		if (vScroll != 0) {
+			ctx.putImageData(id, (iteration*hScroll)%1200, -Math.sign(vScroll)*800+(iteration*vScroll)%800);		
+		}		
+		if (hScroll != 0) {
+			ctx.putImageData(id, -Math.sign(hScroll)*1200+(iteration*hScroll)%1200, (iteration*vScroll)%800);			
+		}
+		ctx.putImageData(id, (iteration*hScroll)%1200, (iteration*vScroll)%800);		
+	}
+	iteration++
 }
 
 function inputEventHandler(el) {
@@ -127,8 +126,8 @@ function init() {
 
 		const ctx = canvas.getContext("2d");
 		images[imageSource] = img
-		render(imageSource,canvas, ctx, offset)
-		setInterval(function() { render(imageSource, canvas, ctx, offset) }, 75)
+		render(canvas, ctx, offset)
+		setInterval(function() { render(canvas, ctx, offset) }, 100)
 		$("#knob-control").css("display", "flex")
 	}
 }
@@ -139,9 +138,14 @@ $( document ).ready(function() {
 	renderSchedule()
 
 	$("#channel-button").click(function(){
-		imageSource = "img/mj-" + Math.ceil(Math.random()*4) + ".png"
-		clearCanvas();
-		init();
+		let nextSource = "img/mj-" + Math.ceil(Math.random()*4) + ".png"
+		let img = new Image();	
+		img.src = nextSource;
+		img.onload = function() {
+			images[nextSource] = img
+			imageSource = nextSource
+			clearCanvas();
+		}				
 	});
 
 });
