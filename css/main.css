@@ -561,6 +561,19 @@ canvas {
   filter:  grayscale(100%) sepia(15%)
 }
 
+#channel-button {
+  background-color: #262626;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  margin-left: 10px;
+}
+
+#channel-button:hover {
+  background-color: #5379F4;
+}
+
 footer {
   margin-top: 2em;
   /*border-top:  1px solid rgba(0,0,0,0.5);*/

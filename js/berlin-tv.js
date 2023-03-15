@@ -5,6 +5,9 @@ let vScroll = 0
 let hScroll = 0
 
 let iteration = 0
+var imageSource = "img/mess.png"
+
+const images = {}
 
 function setPixel(imageData, x, y, r, g, b, a) {
     var index = 4 * (x + y * imageData.width);
@@ -14,31 +17,33 @@ function setPixel(imageData, x, y, r, g, b, a) {
     imageData.data[index+3] = a;
 }
 
-function render(img, canvas, ctx, offset) {
+function render(imageSource, canvas, ctx, offset) {
 
-		ctx.drawImage(img, offset, 0);
-		let id = ctx.getImageData(0, 0, canvas.width, canvas.height);	
-		let pixels = id.data
-		ctx.clearRect(0, 0, canvas.width, canvas.height);
+		if (images[imageSource]) {
+			ctx.drawImage(images[imageSource], offset, 0);
+			let id = ctx.getImageData(0, 0, canvas.width, canvas.height);	
+			let pixels = id.data
+			ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-		let dice = Math.floor(Math.random()*maxDice)
-		for (let i=0; i<canvas.height; i++) {
-			for (let j=0; j<canvas.width; j++) {
-				let off = (i * id.width + j) * 4;
-				if (pixels[off] > dice && pixels[off+2] > thresholdA + thresholdB*Math.random()) {									
-					setPixel(id,j, i, pixels[off], pixels[off+1],pixels[off+2],pixels[off+3])
-				} else {
-					setPixel(id,j, i, 0, 0, 0, 0)
+			let dice = Math.floor(Math.random()*maxDice)
+			for (let i=0; i<canvas.height; i++) {
+				for (let j=0; j<canvas.width; j++) {
+					let off = (i * id.width + j) * 4;
+					if (pixels[off] > dice && pixels[off+2] > thresholdA + thresholdB*Math.random()) {									
+						setPixel(id,j, i, pixels[off], pixels[off+1],pixels[off+2],pixels[off+3])
+					} else {
+						setPixel(id,j, i, 0, 0, 0, 0)
+					}
 				}
 			}
+			if (vScroll != 0) {
+				ctx.putImageData(id, (iteration*hScroll)%1200, -Math.sign(vScroll)*800+(iteration*vScroll)%800);		
+			}		
+			if (hScroll != 0) {
+				ctx.putImageData(id, -Math.sign(hScroll)*1200+(iteration*hScroll)%1200, (iteration*vScroll)%800);			
+			}
+			ctx.putImageData(id, (iteration*hScroll)%1200, (iteration*vScroll)%800);		
 		}
-		if (vScroll != 0) {
-			ctx.putImageData(id, (iteration*hScroll)%1200, -Math.sign(vScroll)*800+(iteration*vScroll)%800);		
-		}		
-		if (hScroll != 0) {
-			ctx.putImageData(id, -Math.sign(hScroll)*1200+(iteration*hScroll)%1200, (iteration*vScroll)%800);			
-		}
-		ctx.putImageData(id, (iteration*hScroll)%1200, (iteration*vScroll)%800);		
 		iteration++
 }
 
@@ -98,11 +103,14 @@ function renderSchedule() {
 	}	
 }
 
-$( document ).ready(function() {
+function clearCanvas() {
+	let ctx = document.getElementById("canvas").getContext("2d");
+	ctx.clearRect(0, 0, canvas.width, canvas.height);
+}
 
-	var img = new Image();	
-	img.src = "img/mess.png";
-	// img.src = "img/mj-4.png";
+function init() {
+	let img = new Image();	
+	img.src = imageSource;
 	img.onload = function() {
 		const canvas = document.getElementById("canvas");		
 		const container = document.getElementById('container');
@@ -118,10 +126,22 @@ $( document ).ready(function() {
 		}
 
 		const ctx = canvas.getContext("2d");
-		render(img,canvas, ctx, offset)
-		setInterval(function() { render(img, canvas, ctx, offset) }, 75)
+		images[imageSource] = img
+		render(imageSource,canvas, ctx, offset)
+		setInterval(function() { render(imageSource, canvas, ctx, offset) }, 75)
 		$("#knob-control").css("display", "flex")
 	}
+}
 
+$( document ).ready(function() {
+
+	init();
 	renderSchedule()
+
+	$("#channel-button").click(function(){
+		imageSource = "img/mj-" + Math.ceil(Math.random()*4) + ".png"
+		clearCanvas();
+		init();
+	});
+
 });
