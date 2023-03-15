@@ -104,7 +104,7 @@ $( document ).ready(function() {
 			parallel.append(desc)
 			parallel.append(who)
 		} else {
-			head.addClass("right")
+			// head.addClass("right")
 			parallel.append(who)
 			desc.addClass("right-desc")
 			parallel.append(desc)

@@ -499,6 +499,16 @@ canvas {
 }
 
 .talk-entry .bio {
+  max-width: 50%;
+}
+
+.talk-entry .description {
+  max-width: 50%;
+  padding-right: 5em;
+}
+
+.talk-entry .speaker {
+  max-width: 80%;
 }
 
 .talk-entry h2 {
@@ -506,6 +516,7 @@ canvas {
     font-size: 2em;
     /*line-height: 2em;*/
     margin-bottom: 0.5em;
+    /*max-width: 65%;*/
 }
 
 .talk-entry h3 {
@@ -518,9 +529,10 @@ canvas {
 }
 
 .talk-entry p {
-  font-size: 1em;
-  line-height: 1.25em;
-  max-width: 65%;
+  font-size: 1.15em;
+  line-height: 1.3em;
+  max-width: 90%;
+  font-weight: 300;
 }
 
 .right {
@@ -535,7 +547,9 @@ canvas {
 .talk-entry h5 {
   font-size: 1em;
   color:  rgba(0,0,0,0.5);
-  margin-bottom: 0em;
+  margin-bottom: 0.25em;
+  font-weight: 300;
+  color:  #262626;
   text-transform: uppercase;
 }
 

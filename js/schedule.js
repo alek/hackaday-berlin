@@ -39,7 +39,7 @@ how you can do it too!",
 	 "about": "Matt Venn is a science & technology communicator and electronic engineer. He brings 20 years of engineering experience to create innovative learning experiences for people all over the world. Most recently he has been focusing on the world of open source silicon.",
 	 "type": "workshop",
 	 "time": "1:30pm-3:30pm",
-	 "title": "Tiny Tapeout - design your own chip and get it made!",
+	 "title": "Workshop: Tiny Tapeout - design your own chip and get it made!",
 	 "description": "In this workshop, you will get the opportunity to design and have manufactured your own design on an ASIC!\
 You will learn: The basics of digital logic, the basics of how semiconductors are designed and made, how to use an online digital design tool to build and simulate a simple design, and how to create the GDS files for manufacture on the open source Sky130 PDK.\
 Participants will have the option to submit their designs to be manufactured on the next shuttle as part of the Tiny Tapeout project.\
@@ -80,7 +80,7 @@ Participants will need a laptop with internet connection. Mouse and headphones a
 	 "about": "A Python programmer by day, and a supervillain constructing insectoid robots, handheld game consoles, custom keyboards",
 	 "type": "workshop",
 	 "time": "4:30pm-6:30pm",
-	 "title": "Build a DIY Desktop Robot",
+	 "title": "Workshop: Build a DIY Desktop Robot",
 	 "description": "A small, cheap, desktop robot like Fluffbug provides ample opportunity for experimenting, while not being too much of a burden. CircuitPython makes it simple to program and it's easy to add sensors or other hardware to it. It can be controlled with your phone over WiFi, but if you bring your laptop and an USB-C cable, you can also program it yourself. https://hackaday.io/project/180025-fluffbug",
 	 "headshot": "/img/tbd.png",
 	 "date": "Saturday",
@@ -117,7 +117,7 @@ Participants will need a laptop with internet connection. Mouse and headphones a
 	 "about": "Paul is regarded as one of the founding members of Pimoroni, who make Pibow, PiHub, Pibrella and other useful add-ons to make raspberry pi more fun for learning and interactivity. Paul combats his social anxiety and imposter syndrome by mentioning he also designed the Raspberry Pi logo.",
 	 "type": "workshop",
 	 "time": "Part 1: 10:30am- 12pm / Part 2: 3:30-4:30pm",
-	 "title": "Hu-O-Rama: Robot Popularity Contest",
+	 "title": "Workshop: Hu-O-Rama: Robot Popularity Contest",
 	 "description": "Presented by Digi-Key / Given craft materials, motors, servos and Pico microcontrollers, you will be guided in making a robot companion with one redeeming personality trait. We will then battle these neocytes head-to-head as your fellow workshoppers vote on their superficial charm. The winner gets to question those years they spent being really good at something else. ",
 	 "headshot": "/img/tbd.png",
 	 "date": "Saturday",
