@@ -32,6 +32,12 @@ function render(img, canvas, ctx, offset) {
 				}
 			}
 		}
+		if (vScroll != 0) {
+			ctx.putImageData(id, (iteration*hScroll)%1200, -Math.sign(vScroll)*800+(iteration*vScroll)%800);		
+		}		
+		if (hScroll != 0) {
+			ctx.putImageData(id, -Math.sign(hScroll)*1200+(iteration*hScroll)%1200, (iteration*vScroll)%800);			
+		}
 		ctx.putImageData(id, (iteration*hScroll)%1200, (iteration*vScroll)%800);		
 		iteration++
 }
@@ -60,30 +66,7 @@ function inputEventHandler(el) {
 function changeEventHandler(el) {
 }
 
-$( document ).ready(function() {
-
-	var img = new Image();	
-	img.src = "img/mess.png";
-	img.onload = function() {
-		const canvas = document.getElementById("canvas");		
-		const container = document.getElementById('container');
-		canvas.width = container.clientWidth;
-		canvas.height = 800;
-		let offset = 0;
-		if (canvas.width < 1259) {
-			offset = canvas.width - 1259
-		} else if (canvas.width > 1400 && canvas.width < 1800) {
-			offset = canvas.width - 1400
-		} else if (canvas.width > 1800) {
-			offset = Math.min(300, canvas.width - 1600)
-		}
-
-		const ctx = canvas.getContext("2d");
-		render(img,canvas, ctx, offset)
-		setInterval(function() { render(img, canvas, ctx, offset) }, 75)
-		$("#knob-control").css("display", "flex")
-	}
-
+function renderSchedule() {
 	for (let i=0; i<schedule.length; i++) {
 		let entry = $('<div></div>').addClass("talk-entry");
 
@@ -112,5 +95,32 @@ $( document ).ready(function() {
 		entry.append(head)
 		entry.append(parallel)
 		$("#talks-container").append(entry)
+	}	
+}
+
+$( document ).ready(function() {
+
+	var img = new Image();	
+	img.src = "img/mess.png";
+	img.onload = function() {
+		const canvas = document.getElementById("canvas");		
+		const container = document.getElementById('container');
+		canvas.width = container.clientWidth;
+		canvas.height = 800;
+		let offset = 0;
+		if (canvas.width < 1259) {
+			offset = canvas.width - 1259
+		} else if (canvas.width > 1400 && canvas.width < 1800) {
+			offset = canvas.width - 1400
+		} else if (canvas.width > 1800) {
+			offset = Math.min(300, canvas.width - 1600)
+		}
+
+		const ctx = canvas.getContext("2d");
+		render(img,canvas, ctx, offset)
+		setInterval(function() { render(img, canvas, ctx, offset) }, 75)
+		$("#knob-control").css("display", "flex")
 	}
+
+	renderSchedule()
 });
