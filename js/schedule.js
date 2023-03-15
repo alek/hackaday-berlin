@@ -6,13 +6,7 @@ const schedule = [
 	 "type": "talk",
 	 "time": "10:30am-11:30am",
 	 "title": "Hacking Closed-Source: The Power of Reverse Engineering Real-World Products",
-	 "description": "Closed-source software is prevalent in our everyday lives, limiting our ability to understand how it works, which privacy implication it poses to the processed data, and addressing potential\
-issues in time. Despite the growth of open-source movements, users often have no choice but to rely on closed-source solutions, e.g., for medical devices and IoT products. Reverse engineering\
-provides a solution by partially reversing a program's compilation process, thereby making software open-source.\
-\
-In this talk, we'll explore the challenges of reverse engineering, specifically the difficulties of reverse engineering real-world products. Additionally, we'll discuss key techniques to help\
-you get started with reverse engineering. Hacking your own devices can be challenging, bricking a device is not uncommon, but so is celebrating the moments of a revived and modified device.\
-",
+	 "description": "Closed-source software is prevalent in our everyday lives, limiting our ability to understand how it works, which privacy implication it poses to the processed data, and addressing potential issues in time. Despite the growth of open-source movements, users often have no choice but to rely on closed-source solutions, e.g., for medical devices and IoT products. Reverse engineering provides a solution by partially reversing a program's compilation process, thereby making software open-source. In this talk, we'll explore the challenges of reverse engineering, specifically the difficulties of reverse engineering real-world products. Additionally, we'll discuss key techniques to help you get started with reverse engineering. Hacking your own devices can be challenging, bricking a device is not uncommon, but so is celebrating the moments of a revived and modified device.",
 	 "headshot": "./img/jiska.png",
 	 "date": "Saturday",
 	 "location": "LACM"
@@ -24,11 +18,7 @@ you get started with reverse engineering. Hacking your own devices can be challe
 	 "type": "talk",
 	 "time": "11:30am-12:30pm",
 	 "title": "Being a Full-Time YouTuber",
-	 "description": "YouTube is my full-time job and has been for four years. I create STEM\
-education content using everything from 3D printing, CNC, Welding, to\
-Microcontrollers and Coding. Find out how I got started, how I make money,\
-what goes on in the background, and what my future plans are. I'll tell you\
-how you can do it too!",
+	 "description": "YouTube is my full-time job and has been for four years. I create STEM education content using everything from 3D printing, CNC, Welding, to Microcontrollers and Coding. Find out how I got started, how I make money, what goes on in the background, and what my future plans are. I'll tell you how you can do it too!",
 	 "headshot": "./img/james.png",
 	 "date": "Saturday",
 	 "location": "LACM"
@@ -40,11 +30,7 @@ how you can do it too!",
 	 "type": "workshop",
 	 "time": "1:30pm-3:30pm",
 	 "title": "Workshop: Tiny Tapeout - design your own chip and get it made!",
-	 "description": "In this workshop, you will get the opportunity to design and have manufactured your own design on an ASIC!\
-You will learn: The basics of digital logic, the basics of how semiconductors are designed and made, how to use an online digital design tool to build and simulate a simple design, and how to create the GDS files for manufacture on the open source Sky130 PDK.\
-Participants will have the option to submit their designs to be manufactured on the next shuttle as part of the Tiny Tapeout project.\
-Participants will need a laptop with internet connection. Mouse and headphones advised.\
-",
+	 "description": "In this workshop, you will get the opportunity to design and have manufactured your own design on an ASIC! You will learn: The basics of digital logic, the basics of how semiconductors are designed and made, how to use an online digital design tool to build and simulate a simple design, and how to create the GDS files for manufacture on the open source Sky130 PDK. Participants will have the option to submit their designs to be manufactured on the next shuttle as part of the Tiny Tapeout project. Participants will need a laptop with internet connection. Mouse and headphones advised.",
 	 "date": "Saturday",
 	 "location": "LACM",
 	 "headshot": "./img/matt.png",
@@ -68,8 +54,8 @@ Participants will need a laptop with internet connection. Mouse and headphones a
 	 "about": "Ali Shtarbanov, a researcher and Ph.D. student at MIT Media Lab, is on a mission to make prototyping and innovation in emerging fields more rapid for experts and more accessible for the general public through the design and deployment of physical and digital platforms. His research areas include modular systems design, soft robotics, haptics, sustainable deployment models, and community building. ",
 	 "type": "talk",
 	 "time": "3:30pm-4:30pm",
-	 "title": "Creating Hardware Development Platforms for Real-World Impact: FlowIO Platform",
-	 "description": "What does it really take do create and deploy a development platform for real-world impact? Why do we need development platforms and how can they democratize emerging fieleds and accelerate innovation? Why do most platform attempts fail and only very few succeed in terms of impact? I will discuss the key characteristics that any platform technology must have in order for it to be able to useful for diverse users, and will provide a framework I developed during my PhD for how to design and deploy platfom technologies. These high-level topics will be grounded in the contest of the FlowIO Platform and the opportunities, projects, and impact it has enabled until today. FlowIO was the winner of the 2021 Hackaday Grand Prize as well as over a dozen other engineering, research, and design awards.",
+	 "title": "Creating Hardware Development Platforms for Democratizing Emerging Fields: FlowIO Platform",
+	 "description": "What does it really take to create and deploy development platforms for real-world impact? Why do we need development platforms and how can they democratize emerging fields and accelerate innovation? Why do most platform attempts fail and only very few succeed in terms of impact and adoption? This talk will present a framework of the essential characteristics that any development platform must offer, not only in terms of technology, in order for it to be suitable for diverse users and to achieve mass adoption. This framework will be grounded in the context of the FlowIO Platform and the numerous projects it has enabled around the world. FlowIO was the winner of the 2021 Hackaday Grand Prize and numerous other engineering, research, and design awards.",
 	 "headshot": "./img/ali.jpeg",
 	 "date": "Saturday",
 	 "location": "LACM"
@@ -89,7 +75,7 @@ Participants will need a laptop with internet connection. Mouse and headphones a
 
 	{
 	 "speaker": 'Radomir "deshipu" Dopieralski',
-	 "about": "A Python programmer by day, and a supervillain constructing insectoid robots, handheld game consoles, custom keyboards",
+	 "about": "A Python programmer by day, and a supervillain constructing insectoid robots, handheld game consoles, custom keyboards and other projects by night. He sometimes haunts the Swiss Mechatronic Art Society and tries to convert everyone to using CircuitPython.",
 	 "type": "workshop",
 	 "time": "4:30pm-6:30pm",
 	 "title": "Workshop: Build a DIY Desktop Robot",
@@ -105,7 +91,7 @@ Participants will need a laptop with internet connection. Mouse and headphones a
 	 "type": "talk",
 	 "time": "7:30pm-8:30pm",
 	 "title": "Oops, my project ended up in a museum",
-	 "description": "Parameterized design allows for the adaption of projects to different needs but can also change the aesthetic to a persons liking. Bleeptrack will walk you through the creation process and tools of her generative projects, talk about her experience manufacturing unique pieces and explains how to cope when your freshly finished project gets locked up in an art exhibition for a few months.",
+	 "description": "Parameterized design allows for the adaption of projects to different needs but can also change the aesthetic to a persons liking. Bleeptrack will walk you through the creation process and tools of her generative projects, talk about her experience manufacturing unique pieces and explain how to cope when your freshly finished project gets locked up in an art exhibition for a few months.",
 	 "headshot": "./img/bleeptrack.png",
 	 "date": "Saturday",
 	 "location": "LACM"
