@@ -494,8 +494,8 @@ canvas {
 .talk-entry {
   margin-bottom: 3em;
   padding-bottom: 3em;
-  padding-top: 3em;
-  /*border-bottom: 1px solid rgba(0,0,0,0.5);*/
+ /* padding-top: 3em;*/
+  border-bottom: 1px solid rgba(0,0,0,0.25);
 }
 
 .talk-entry .bio {

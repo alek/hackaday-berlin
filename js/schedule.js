@@ -58,7 +58,7 @@ Participants will need a laptop with internet connection. Mouse and headphones a
 	 "time": "3:30pm-4:30pm",
 	 "title": "Creating Hardware Development Platforms for Real-World Impact: FlowIO Platform",
 	 "description": "What does it really take do create and deploy a development platform for real-world impact? Why do we need development platforms and how can they democratize emerging fieleds and accelerate innovation? Why do most platform attempts fail and only very few succeed in terms of impact? I will discuss the key characteristics that any platform technology must have in order for it to be able to useful for diverse users, and will provide a framework I developed during my PhD for how to design and deploy platfom technologies. These high-level topics will be grounded in the contest of the FlowIO Platform and the opportunities, projects, and impact it has enabled until today. FlowIO was the winner of the 2021 Hackaday Grand Prize as well as over a dozen other engineering, research, and design awards.",
-	 "headshot": "/img/ali.png",
+	 "headshot": "/img/tbd.png",
 	 "date": "Saturday",
 	 "location": "LACM"
 	},
@@ -70,7 +70,7 @@ Participants will need a laptop with internet connection. Mouse and headphones a
 	 "time": "4:30pm-5:30pm",
 	 "title": "Latency in interaction: When it matters",
 	 "description": "Latency is an often-discussed term, but when does it really matter for interactive projects? In this talk, one of Bela.io's founding developers, Astrid Bin, discusses the problems latency can introduce in interaction, and strategies for getting around them.",
-	 "headshot": "/img/astrid.png",
+	 "headshot": "/img/tbd.png",
 	 "date": "Saturday",
 	 "location": "LACM"
 	},
@@ -82,7 +82,7 @@ Participants will need a laptop with internet connection. Mouse and headphones a
 	 "time": "4:30pm-6:30pm",
 	 "title": "Build a DIY Desktop Robot",
 	 "description": "A small, cheap, desktop robot like Fluffbug provides ample opportunity for experimenting, while not being too much of a burden. CircuitPython makes it simple to program and it's easy to add sensors or other hardware to it. It can be controlled with your phone over WiFi, but if you bring your laptop and an USB-C cable, you can also program it yourself. https://hackaday.io/project/180025-fluffbug",
-	 "headshot": "/img/radomir.png",
+	 "headshot": "/img/tbd.png",
 	 "date": "Saturday",
 	 "location": "LACM"
 	},
@@ -106,7 +106,7 @@ Participants will need a laptop with internet connection. Mouse and headphones a
 	 "time": "8:30pm-9:30pm",
 	 "title": "Hacking your dishwasher for cloudless Home Connect",
 	 "description": "Why does your dishwasher, laundry or coffee-pot need to talk to the cloud? In this presentation, Trammell Hudson shows how he reverse engineered the encrypted connections between Home Connect appliances and the Bosch-Siemens Cloud servers, and how you can control your own appliances with your self-hosted MQTT home automation system by extracting the devices' authentication keys and connecting to their local websocket ports. No cloud required!",
-	 "headshot": "/img/trammel.png",
+	 "headshot": "/img/tbd.png",
 	 "date": "Saturday",
 	 "location": "LACM"
 	},
@@ -119,7 +119,7 @@ Participants will need a laptop with internet connection. Mouse and headphones a
 	 "time": "Part 1: 10:30am- 12pm / Part 2: 3:30-4:30pm",
 	 "title": "Hu-O-Rama: Robot Popularity Contest",
 	 "description": "Presented by Digi-Key / Given craft materials, motors, servos and Pico microcontrollers, you will be guided in making a robot companion with one redeeming personality trait. We will then battle these neocytes head-to-head as your fellow workshoppers vote on their superficial charm. The winner gets to question those years they spent being really good at something else. ",
-	 "headshot": "/img/paul.png",
+	 "headshot": "/img/tbd.png",
 	 "date": "Saturday",
 	 "location": "LACM"
 	},
