@@ -138,7 +138,7 @@ $( document ).ready(function() {
 	renderSchedule()
 
 	$("#channel-button").click(function(){
-		let nextSource = "img/mj-" + Math.ceil(Math.random()*4) + ".png"
+		let nextSource = "img/mj-" + Math.ceil(Math.random()*5) + ".png"
 		let img = new Image();	
 		img.src = nextSource;
 		img.onload = function() {
