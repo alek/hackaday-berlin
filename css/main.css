@@ -25,6 +25,7 @@ body {
   padding-top: 3em;
   width:  90vw;
   margin: auto;
+  max-width: 1500px;
 }
 
 /*
