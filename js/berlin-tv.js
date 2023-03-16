@@ -5,8 +5,9 @@ let vScroll = 0
 let hScroll = 0
 
 let iteration = 0
-var imageSource = "img/mess.png"
 let increment = 1
+
+var imageSource = "img/mess.png"
 
 const images = {}
 
@@ -162,6 +163,17 @@ function init() {
 	}
 }
 
+function toggle() {
+	let nextSource = "img/mj-" + Math.floor(Math.random()*10) + ".png"
+	let img = new Image();	
+	img.src = nextSource;
+	img.onload = function() {
+		images[nextSource] = img
+		imageSource = nextSource
+		clearCanvas();
+	}				
+}
+
 $( document ).ready(function() {
 
 	init();
@@ -169,14 +181,8 @@ $( document ).ready(function() {
 	renderCalendar();
 
 	$("#channel-button").click(function(){
-		let nextSource = "img/mj-" + Math.floor(Math.random()*5) + ".png"
-		let img = new Image();	
-		img.src = nextSource;
-		img.onload = function() {
-			images[nextSource] = img
-			imageSource = nextSource
-			clearCanvas();
-		}				
+		toggle();
 	});
 
+	// setInterval(function() { toggle() }, 500)
 });
