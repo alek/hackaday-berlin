@@ -1,4 +1,5 @@
-const schedule = [
+const schedule = {
+	"talks": [
 
 	{
 	 "speaker": "Jiska Classen",
@@ -103,12 +104,136 @@ const schedule = [
 	 "type": "talk",
 	 "time": "8:30pm-9:30pm",
 	 "title": "Hacking your dishwasher for cloudless Home Connect",
-	 "description": "Why does your dishwasher, laundry or coffee-pot need to talk to the cloud? In this presentation, Trammell Hudson shows how he reverse engineered the encrypted connections between Home Connect appliances and the Bosch-Siemens Cloud servers, and how you can control your own appliances with your self-hosted MQTT home automation system by extracting the devices' authentication keys and connecting to their local websocket ports. No cloud required!",
+	 "description": "Why does your dishwasher, laundry or coffee-pot need to talk to the cloud? In this presentation, Trammell Hudson shows how he reverse engineered the encrypted connections between Home Connect appliances and the Cloud servers, and how you can control your own appliances with your self-hosted MQTT home automation system by extracting the devices' authentication keys and connecting to their local websocket ports. No cloud required!",
 	 "headshot": "./img/trammel.jpeg",
 	 "date": "Saturday",
 	 "location": "LACM"
 	},
+],
+	"calendar": {
+		"Friday": [
+			{
+				"time": "7PM - 12PM",
+				"name": "Meet Up Brew Dog 23 Im Marienpark, Berlin, 12107"
+			}
+		],
+		"Saturday": [
+			{
+				"time": "9:30AM - 10AM",
+				"name": "Doors Open/ Registration/ Breakfast",
+				"title": ""
+			},
+			{
+				"time": "10AM - 10:30AM",
+				"name": "Opening Remarks",
+				"title": ""
+			},
+			{
+				"time": "10:30AM - 12:00PM",
+				"name": "Paul Beech",
+				"title": "Workshop: Hu-O-Rama: Robot Popularity Contest (Part 1)"
+			},
+			{
+				"time": "11AM - 11:30AM",
+				"name": "Jiska Classen",
+				"title": "Hacking Closed-Source: The Power of Reverse Engineering Real-World Products"
 
+			},
+			{
+				"time": "11:30AM - 12:30PM",
+				"name": "James Bruton",
+				"title": "Being a Full-Time YouTuber"
+			},
+			{
+				"time": "12:30PM - 1PM",
+				"name": "Lunch",
+				"title": ""
+			},
+			{
+				"time": "1:30PM - 2:30PM",
+				"name": "Lightning Talks",
+				"title": ""
+			},
+			{
+				"time": "1:30PM - 3:30PM",
+				"name": "Matt Venn",
+				"title": "Workshop: Tiny Tapeout - design your own chip and get it made!"
+			},
+			{
+				"time": "2:30PM - 3PM",
+				"name": "Break",
+				"title": ""
+			},
+			{
+				"time": "3PM - 4PM",
+				"name": "Ali Shtarbanov",
+				"title": ""
+			},
+			{
+				"time": "3:30PM - 4:30PM",
+				"name": "Paul Beech",
+				"title": "Workshop: Hu-O-Rama: Robot Popularity Contest (Part 2)"
+			},
+			{
+				"time": "4PM - 4:30PM",
+				"name": "2023 Hackaday Prize Launch",
+				"title": ""
+			},
+			{
+				"time": "1:30PM - 3:30PM",
+				"name": "Radomir \"deshipu\" Dopieralski",
+				"title": "Workshop: Build a DIY Desktop Robot"
+			},
 
-]
+			{
+				"time": "4:30PM - 5:30PM",
+				"name": "Astrid Bin",
+				"title": "Latency in interaction: When it matters"
+			},
+			{
+				"time": "5:30PM - 6:30PM",
+				"name": "Lighning Talks",
+				"title": ""
+			},
+			{
+				"time": "6:30PM - 7:30PM",
+				"name": "Dinner",
+				"title": ""
+			},
+			{
+				"time": "7:30PM - 8:30PM",
+				"name": "Bleeptrack",
+				"title": "Oops, my project ended up in a museum"
+			},
+			{
+				"time": "8:30PM - 9:30PM",
+				"name": "Trammel Hudson",
+				"title": "Hacking your dishwasher for cloudless Home Connect"
+			},
+			{
+				"time": "9:30PM - 10:30PM",
+				"name": "Talk/TBD",
+				"title": ""
+			},
+			{
+				"time": "10:30PM - 11PM",
+				"name": "Break",
+				"title": ""
+			},
+			{
+				"time": "11PM - 12AM",
+				"name": "Badge Hacking Ceremony",
+				"title": ""
+			},
+	
+		],
+		"Sunday": [
+			{
+				"time": "11AM - 2PM",
+				"name": "Brunch + Badge Hacking",
+				"title": ""
+			},
+		]
+	}
+}
 

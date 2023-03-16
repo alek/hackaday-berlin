@@ -80,22 +80,23 @@ function inputEventHandler(el) {
 function changeEventHandler(el) {
 }
 
-function renderSchedule() {
-	for (let i=0; i<schedule.length; i++) {
+function renderTalks() {
+	let talks = schedule["talks"]
+	for (let i=0; i<talks.length; i++) {
 		let entry = $('<div></div>').addClass("talk-entry");
 
 		let head = $('<div></div>').addClass("talk-head");
-		head.append($('<h5>' + schedule[i]["time"] + '</h5>'))
-		head.append($('<h2>' + schedule[i]["title"] + '</h2>'))
-		head.append($('<h3>' + schedule[i]["speaker"] + '</h3>'))
+		head.append($('<h5>' + talks[i]["time"] + '</h5>'))
+		head.append($('<h2>' + talks[i]["title"] + '</h2>'))
+		head.append($('<h3>' + talks[i]["speaker"] + '</h3>'))
 		
 		let parallel = $('<div></div>').addClass("parallel");
 		let who = $('<div></div>').addClass("bio");
-		who.append($('<img></img>').attr({ 'src':  schedule[i]["headshot"], 'height': '200px' } ))
-		who.append($('<div class="speaker">' + schedule[i]["about"] + '</div>'))	
+		who.append($('<img></img>').attr({ 'src':  talks[i]["headshot"], 'height': '200px' } ))
+		who.append($('<div class="speaker">' + talks[i]["about"] + '</div>'))	
 
 		let desc = $('<div></div>').addClass("description");
-		desc.append('<p>' + schedule[i]["description"]  + "</p>")
+		desc.append('<p>' + talks[i]["description"]  + "</p>")
 
 		if (i%2 == 0) {
 			parallel.append(desc)
@@ -110,6 +111,25 @@ function renderSchedule() {
 		entry.append(parallel)
 		$("#talks-container").append(entry)
 	}	
+}
+
+function renderCalendar() {
+	let calendar = schedule["calendar"]
+	for (let day in calendar) {
+		let entry = $('<div></div>').addClass("day-header");
+		entry.append($('<h4>' + day + '</h4>'))
+		$("#calendar-container").append(entry)
+
+		let daywise = $('<div></div>').addClass("day-events");
+		for (let i=0; i<calendar[day].length; i++) {
+			let entry = $('<div></div>').addClass("entry");
+			entry.append($('<h3>' + calendar[day][i]["time"] + '</h3>'))
+			entry.append($('<h2>' + calendar[day][i]["name"] + '</h2>'))
+			entry.append($('<h5>' + calendar[day][i]["title"] + '</h5>'))
+			daywise.append(entry)	
+		}
+		$("#calendar-container").append(daywise)
+	}
 }
 
 function clearCanvas() {
@@ -145,7 +165,8 @@ function init() {
 $( document ).ready(function() {
 
 	init();
-	renderSchedule()
+	renderTalks();
+	renderCalendar();
 
 	$("#channel-button").click(function(){
 		let nextSource = "img/mj-" + Math.floor(Math.random()*5) + ".png"

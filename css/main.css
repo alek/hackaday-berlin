@@ -579,6 +579,49 @@ canvas {
   margin-left: 0.25em;
 }
 
+#calendar-container {
+  margin-top: 5em;
+}
+
+#calendar-container .day-header {
+  margin-top: 5em;
+  max-width: 400px;
+}
+
+#calendar-container .entry {
+  /*max-width: 600px;*/
+  padding-right: 3em;
+  width: 300px;
+  margin-bottom: 4em;
+}
+
+#calendar-container h4 {
+  color: #000;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  font-weight: 700;
+  border-top: 10px solid #000;
+  line-height: 3em;
+  border-bottom: 2px solid #000;
+}
+
+#calendar-container h4 {
+  font-size: 2em;
+}
+
+#calendar-container h3 {
+  color: #0061D5;
+  font-weight: 400;
+  margin-bottom: 0.5em;
+  font-size: 1.25em;
+
+}
+
+.day-events {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 button {
   border:  0;
   background-color: #F2F1E4;
