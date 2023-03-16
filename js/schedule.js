@@ -114,7 +114,8 @@ const schedule = {
 		"Friday": [
 			{
 				"time": "7PM - 12PM",
-				"name": "Meet Up Brew Dog 23 Im Marienpark, Berlin, 12107"
+				"name": "Meet Up at Brew Dog  / Dogtap Berlin",
+				"title": "Im Marienpark 23, Berlin, 12107"
 			}
 		],
 		"Saturday": [
@@ -230,7 +231,7 @@ const schedule = {
 		"Sunday": [
 			{
 				"time": "11AM - 2PM",
-				"name": "Brunch + Badge Hacking",
+				"name": "Bring a Hack Brunch",
 				"title": ""
 			},
 		]
