@@ -720,6 +720,23 @@ footer p {
   .talk {
     max-width: 100%;
   }
+  .parallel {
+    display: block;
+  }
+  .talk-entry h2 {
+    max-width: 90%;
+  }
+  .talk-entry .description {
+    max-width: 100%;
+    padding-right: 0em;
+  }
+  .talk-entry .bio {
+    max-width: 100%;
+  }
+  .talk-entry .right-desc {
+    justify-content: start;
+  }
+
 }
 
 @media only screen and (max-width: 450px) {
