@@ -11,6 +11,8 @@ var imageSource = "img/mess.png"
 
 const images = {}
 
+var refreshInterval = null
+
 function setPixel(imageData, x, y, r, g, b, a) {
     var index = 4 * (x + y * imageData.width);
     imageData.data[index+0] = r;
@@ -174,6 +176,21 @@ function toggle() {
 	}				
 }
 
+function play() {
+	document.getElementById('player').play()	
+	hScroll = 5
+	refreshInterval = setInterval(function() { toggle() }, 1000)
+}
+
+function pause() {
+	document.getElementById('player').pause()
+	hScroll = 0
+	if (refreshInterval) {
+		imageSource = "img/mess.png"
+		clearInterval(refreshInterval)	
+	}	
+}
+
 $( document ).ready(function() {
 
 	init();
@@ -183,6 +200,4 @@ $( document ).ready(function() {
 	$("#channel-button").click(function(){
 		toggle();
 	});
-
-	// setInterval(function() { toggle() }, 500)
 });
