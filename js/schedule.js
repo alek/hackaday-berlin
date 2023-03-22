@@ -193,7 +193,7 @@ const schedule = {
 			},
 			{
 				"time": "5:30PM - 6:30PM",
-				"name": "Lighning Talks",
+				"name": "Lightning Talks",
 				"title": ""
 			},
 			{
