@@ -181,7 +181,7 @@ const schedule = {
 				"title": ""
 			},
 			{
-				"time": "1:30PM - 3:30PM",
+				"time": "4:30PM - 6:30PM",
 				"name": "Radomir \"deshipu\" Dopieralski",
 				"title": "Workshop: Build a DIY Desktop Robot"
 			},
