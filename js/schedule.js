@@ -54,7 +54,7 @@ const schedule = {
 	 "speaker": "Ali Shtarbanov",
 	 "about": "Ali Shtarbanov, a researcher and Ph.D. student at MIT Media Lab, is on a mission to make prototyping and innovation in emerging fields more rapid for experts and more accessible for the general public through the design and deployment of physical and digital platforms. His research areas include modular systems design, soft robotics, haptics, sustainable deployment models, and community building. ",
 	 "type": "talk",
-	 "time": "3:30pm-4:30pm",
+	 "time": "3:00pm-4:00pm",
 	 "title": "Creating Hardware Development Platforms for Democratizing Emerging Fields: FlowIO Platform",
 	 "description": "What does it really take to create and deploy development platforms for real-world impact? Why do we need development platforms and how can they democratize emerging fields and accelerate innovation? Why do most platform attempts fail and only very few succeed in terms of impact and adoption? This talk will present a framework of the essential characteristics that any development platform must offer, not only in terms of technology, in order for it to be suitable for diverse users and to achieve mass adoption. This framework will be grounded in the context of the FlowIO Platform and the numerous projects it has enabled around the world. FlowIO was the winner of the 2021 Hackaday Grand Prize and numerous other engineering, research, and design awards.",
 	 "headshot": "./img/ali.jpeg",
