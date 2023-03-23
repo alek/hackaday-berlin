@@ -135,7 +135,7 @@ const schedule = {
 				"title": "Workshop: Hu-O-Rama: Robot Popularity Contest (Part 1)"
 			},
 			{
-				"time": "11AM - 11:30AM",
+				"time": "10:30AM - 11:30AM",
 				"name": "Jiska Classen",
 				"title": "Hacking Closed-Source: The Power of Reverse Engineering Real-World Products"
 
