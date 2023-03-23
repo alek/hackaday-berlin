@@ -213,8 +213,8 @@ const schedule = {
 			},
 			{
 				"time": "9:30PM - 10:30PM",
-				"name": "Talk/TBD",
-				"title": ""
+				"name": "Live Performance: Richard Hogben",
+				"title": "Hackaday OST"
 			},
 			{
 				"time": "10:30PM - 11PM",
