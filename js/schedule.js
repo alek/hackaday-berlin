@@ -212,14 +212,14 @@ const schedule = {
 				"title": "Hacking your dishwasher for cloudless Home Connect"
 			},
 			{
-				"time": "9:30PM - 10:30PM",
-				"name": "Live Performance: Richard Hogben",
-				"title": "Hackaday OST"
-			},
-			{
-				"time": "10:30PM - 11PM",
+				"time": "9:30PM - 10:00PM",
 				"name": "Break",
 				"title": ""
+			},
+			{
+				"time": "10:00PM - 11PM",
+				"name": "Live Performance: Richard Hogben",
+				"title": "Hackaday OST"
 			},
 			{
 				"time": "11PM - 12AM",
