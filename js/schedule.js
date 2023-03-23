@@ -120,7 +120,7 @@ const schedule = {
 		],
 		"Saturday": [
 			{
-				"time": "9:30AM - 10AM",
+				"time": "9:00AM - 10AM",
 				"name": "Doors Open/ Registration/ Breakfast",
 				"title": ""
 			},
